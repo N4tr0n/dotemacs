@@ -44,7 +44,6 @@
 (use-package ido
   :init
   (ido-mode 1)
-  (ido-everywhere 1)
   :config
   (progn
     (setq ido-case-fold t)
@@ -84,6 +83,16 @@
   :ensure t
   :config (global-flycheck-mode))
 
+(use-package evil
+  :ensure t
+  :config (evil-mode 1))
+
+(use-package key-chord
+  :ensure t
+  :config (setq key-chord-two-keys-delay 0.5)
+  (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+  (key-chord-mode 1))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -91,7 +100,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (flycheck sml-mode company multiple-cursors flx-ido ido-ubiquitous ido-vertical-mode magit exec-path-from-shell use-package))))
+    (key-chord evil flycheck sml-mode company multiple-cursors flx-ido ido-ubiquitous ido-vertical-mode magit exec-path-from-shell use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
