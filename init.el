@@ -66,11 +66,15 @@
   :ensure t
   :init (flx-ido-mode 1))
 
-(use-package multiple-cursors
+(use-package evil-mc
   :ensure t
-  :bind (("C->" . mc/mark-next-like-this)
-	 ("C-<" . mc/mark-previous-like-this)
-	 ("C-c C-<" . mc/mark-all-like-this)))
+  :init (global-evil-mc-mode 1))
+
+;; (use-package multiple-cursors
+;;   :ensure t
+;;   :bind (("C->" . mc/mark-next-like-this)
+;; 	 ("C-<" . mc/mark-previous-like-this)
+;; 	 ("C-c C-<" . mc/mark-all-like-this)))
 
 (use-package company
   :ensure t
@@ -100,7 +104,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (key-chord evil flycheck sml-mode company multiple-cursors flx-ido ido-ubiquitous ido-vertical-mode magit exec-path-from-shell use-package))))
+    (evil-mc key-chord evil flycheck sml-mode company multiple-cursors flx-ido ido-ubiquitous ido-vertical-mode magit exec-path-from-shell use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
