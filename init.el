@@ -104,7 +104,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (evil-mc key-chord evil flycheck sml-mode company multiple-cursors flx-ido ido-ubiquitous ido-vertical-mode magit exec-path-from-shell use-package))))
+    (evil-mc key-chord evil flycheck sml-mode company flx-ido ido-ubiquitous ido-vertical-mode magit exec-path-from-shell use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
